@@ -3,3 +3,5 @@ Pour faire tourner le site :
         * pip install django django-leaflet geopy plotly
  2. Au sein du repository C19Help (le premier) : python manage.py runserver
  3. Cliquer sur le lien
+
+This project is the result of one week learning Django. I had to rush it so don't judge this project to harshly
