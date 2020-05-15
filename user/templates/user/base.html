@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{%block slideTitle %}Menu utilisateur{% endblock %}
+{%block title %}{% endblock %}
+{% block sidebar %}
+
+<a href="{% url "user_home" %}" class="list-group-item list-group-item-action bg-light">Home</a>                                                                                 
+<a href="{% url "commande" %}" class="list-group-item list-group-item-action bg-light">Passer une commande</a>
+<a href="{% url "city_home" %}" class="list-group-item list-group-item-action bg-light">Collectivité</a>
+
+
+{% endblock %}
+{% block navbar %}
+{% if isConnected %}
+
+<li class="nav-item active">                                                                                                                                  
+    <div class="linkright">
+        <a class="nav-link" href="{% url "account_infos" %}">Compte<span class="sr-only">(current)</span></a>
+    </div>
+</li>
+<li class="nav-item">
+    <div class="linkright">
+        <a class="nav-link" href={% url "deconnexion" %}>Déconnexion</a>
+    </div>
+</li>
+{% else %}
+<li class="nav-item active">                                                                                                                                  
+    <div class="linkright">
+        <a class="nav-link" href={% url "connexion" %}>Connexion<span class="sr-only">(current)</span></a>
+    </div>
+</li>
+<li class="nav-item">
+    <div class="linkright">
+        <a class="nav-link" href={% url "suscribe" %}>Inscription</a>
+    </div>
+</li>
+{% endif %}
+{% endblock %}
+{% block content %}{% endblock %}

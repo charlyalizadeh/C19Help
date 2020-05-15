@@ -1,0 +1,13 @@
+{% extends "cityAdmin/base.html" %}
+{% block content %}
+<form action="{% url "map" code %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Liste commandes" class="center" />
+</form>
+<br>
+<br>
+<form action="{% url "commande_summary" code %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Statistiques" class="center" />
+</form>
+{% endblock %}

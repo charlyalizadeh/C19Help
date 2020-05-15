@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block head %}
+{% block css_file %}{% endblock %}
+{% endblock %}
+{%block slideTitle %}Menu collectivité{% endblock %}
+{%block title %}{% endblock %}
+{% block sidebar %}
+
+<a href="{% url "search_commande" %}" class="list-group-item list-group-item-action bg-light">Listes commandes</a>                                                                                 
+<a href="{% url "user_home" %}" class="list-group-item list-group-item-action bg-light">Utilisateur</a>
+
+
+{% endblock %}
+{% block navbar %}{% endblock %}
+{% block content %}{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "cityAdmin/base.html" %}
+{% block content %}
+<form action="{% url "commande_summary" postale_code %}" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Appliquer" />
+</form>
+<div style="width:1000;height:100">
+    {{ graph_div|safe }}
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "user/base.html" %}
+{% block content %}
+<div class = "boxed center">
+    Pseudo : {{ profil.user.username}}<br>
+    Nom :  {{ profil.user.last_name}}<br>
+    Prénom : {{ profil.user.first_name}}<br>
+    Adresse : {{ profil.adress}},{{ profil.postale_code}}<br>
+</div>
+{% endblock %}
